@@ -28,19 +28,7 @@ export default function ContactSection() {
           >
             Contacto
           </Typography>
-          <Stack spacing={2}>
-            <TextField label="Nombre" variant="outlined" fullWidth size={isMobile ? "small" : "medium"} />
-            <TextField label="Email" variant="outlined" fullWidth size={isMobile ? "small" : "medium"} />
-            <TextField label="Mensaje" multiline rows={4} fullWidth size={isMobile ? "small" : "medium"} />
-            <Button
-              variant="contained"
-              color="primary"
-              href="mailto:mendukos@gmail.com"
-              sx={{ py: { xs: 1, sm: 1.5 }, fontSize: { xs: "0.8rem", sm: "1rem" } }}
-            >
-              Enviar
-            </Button>
-          </Stack>
+          
         </Grid>
 
         {/* Redes sociales */}
