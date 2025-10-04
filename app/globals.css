@@ -1,0 +1,9 @@
+html, body, #__next { height: 100%; margin: 0; font-family: Inter, Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }
+/* Basic color tokens for Mendukos */
+:root{
+  --mendukos-bg: #f9f3ef;
+  --mendukos-brown: #5b3a29;
+  --mendukos-beige: #f3e6d9;
+  --mendukos-dark: #2d2a26;
+}
