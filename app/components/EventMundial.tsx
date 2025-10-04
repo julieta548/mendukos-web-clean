@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function EventMundial() {
   return (
     <Box sx={{ py: 6, px: { xs: 2, sm: 4, md: 6 }, maxWidth: 900, mx: "auto" }}>
-      <Typography variant="h4" sx={{ color: "var(--mendukos-brown)", mb: 3 }}>
+      <Typography variant="h4" sx={{ color: "var(--mendukos-brown)", mb: 3, mt: 3 }}>
         Mundial del Alfajor 2024
       </Typography>
       <Image
