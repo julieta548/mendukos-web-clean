@@ -1,25 +1,14 @@
 "use client";
-import { useState } from "react";
-import { AppBar, Toolbar, Typography, Button, Box, IconButton, Menu, MenuItem } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import { Link as ScrollLink } from "react-scroll";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from "react";
 
 export default function Navbar() {
   const sections = ["Inicio", "Nosotros", "Productos", "Eventos", "Contacto"];
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [open, setOpen] = useState(false);
 
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md")); // md = 960px
-
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
+  const toggleDrawer = () => setOpen(!open);
 
   return (
     <AppBar position="fixed" color="default" elevation={1} sx={{ backgroundColor: 'rgba(255,255,255,0.9)' }}>
@@ -28,47 +17,32 @@ export default function Navbar() {
           Mendukos
         </Typography>
 
-        {isMobile ? (
-          <>
-            <IconButton edge="end" color="inherit" onClick={handleMenuOpen}>
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleMenuClose}
-              anchorOrigin={{ vertical: "top", horizontal: "right" }}
-              transformOrigin={{ vertical: "top", horizontal: "right" }}
-            >
-              {sections.map((section) => (
-                <MenuItem key={section} onClick={handleMenuClose}>
-                  <ScrollLink
-                    to={section.toLowerCase()}
-                    smooth
-                    duration={600}
-                    offset={-70}
-                  >
-                    {section}
-                  </ScrollLink>
-                </MenuItem>
-              ))}
-            </Menu>
-          </>
-        ) : (
-          <Box>
+        {/* Desktop menu */}
+        <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
+          {sections.map((section) => (
+            <ScrollLink key={section} to={section.toLowerCase()} smooth duration={600} offset={-70}>
+              <Button color="inherit">{section}</Button>
+            </ScrollLink>
+          ))}
+        </Box>
+
+        {/* Mobile menu */}
+        <IconButton edge="end" color="inherit" sx={{ display: { sm: 'none' } }} onClick={toggleDrawer}>
+          <MenuIcon />
+        </IconButton>
+        <Drawer anchor="right" open={open} onClose={toggleDrawer}>
+          <List sx={{ width: 200 }}>
             {sections.map((section) => (
-              <ScrollLink
-                key={section}
-                to={section.toLowerCase()}
-                smooth
-                duration={600}
-                offset={-70}
-              >
-                <Button color="inherit">{section}</Button>
-              </ScrollLink>
+              <ListItem key={section} disablePadding>
+                <ListItemButton onClick={toggleDrawer}>
+                  <ScrollLink to={section.toLowerCase()} smooth duration={600} offset={-70}>
+                    <ListItemText primary={section} />
+                  </ScrollLink>
+                </ListItemButton>
+              </ListItem>
             ))}
-          </Box>
-        )}
+          </List>
+        </Drawer>
       </Toolbar>
     </AppBar>
   );

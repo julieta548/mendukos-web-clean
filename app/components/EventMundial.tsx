@@ -9,14 +9,14 @@ export default function EventMundial() {
         Mundial del Alfajor 2024
       </Typography>
       <Image
-        src="/images/evento1.jpg"
+        src="/images/evento1.png"
         alt="Mundial del Alfajor"
         width={900}
         height={500}
         style={{ width: "100%", borderRadius: 12, objectFit: "cover", marginBottom: 16 }}
       />
       <Typography variant="body1" paragraph>
-        Mendukos representó a Mendoza en el Mundial del Alfajor 2024, llevando
+        Mendukos representó a Mendoza en el Mundial del Alfajor 2025, llevando
         la tradición artesanal a los visitantes de todo el país. Cada alfajor fue
         elaborado con dedicación y cuidado, mostrando el sabor auténtico de
         Mendoza.
