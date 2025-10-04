@@ -5,7 +5,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const events = [
-  { title: "Mundial del Alfajor 2024", text: "Representando a Mendoza entre los mejores del país.", img: "/images/evento1.png" },
+  { title: "Mundial del Alfajor 2025", text: "Representando a Mendoza entre los mejores del país.", img: "/images/evento1.png" },
   { title: "Fiesta de las Colectividades 2025", text: "Visitá nuestro stand este fin de semana.", img: "/images/evento2.jpg" },
 ];
 
