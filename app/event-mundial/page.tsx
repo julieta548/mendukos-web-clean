@@ -1,4 +1,4 @@
-import EventMundial from "app\components\EventMundial.tsx";
+import EventMundial from "../../components/EventMundial"
 
 export default function Page() {
   return <EventMundial />;

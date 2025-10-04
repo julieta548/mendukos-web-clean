@@ -1,4 +1,4 @@
-import EventMundial from "app\components\EventColectividades.tsx";
+import EventMundial from "../../components/EventColectividades";
 
 export default function Page() {
   return <EventColectividades />;
