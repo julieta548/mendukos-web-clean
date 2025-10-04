@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link as ScrollLink } from "react-scroll";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useRouter } from "next/navigation"; // Para navegación a EventsBlog
 
 export default function Navbar() {
   const sections = ["Inicio", "Nosotros", "Productos", "Eventos", "Contacto"];
@@ -13,6 +14,7 @@ export default function Navbar() {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md")); // md = 960px
+  const router = useRouter();
 
   // Menú principal
   const handleMenuOpen = (event) => setAnchorEl(event.currentTarget);
@@ -21,6 +23,11 @@ export default function Navbar() {
   // Submenu de Eventos
   const handleEventsOpen = (event) => setEventsAnchorEl(event.currentTarget);
   const handleEventsClose = () => setEventsAnchorEl(null);
+
+  const handleNoticiasClick = () => {
+    handleEventsClose();
+    router.push("/eventos-blog"); // Ruta de tu componente EventsBlog
+  };
 
   return (
     <AppBar position="fixed" color="default" elevation={1} sx={{ backgroundColor: 'rgba(255,255,255,0.9)' }}>
@@ -55,7 +62,7 @@ export default function Navbar() {
               ))}
             </Menu>
 
-            {/* Submenu de Eventos (Mobile) */}
+            {/* Submenu de Eventos */}
             <Menu
               anchorEl={eventsAnchorEl}
               open={Boolean(eventsAnchorEl)}
@@ -63,11 +70,7 @@ export default function Navbar() {
               anchorOrigin={{ vertical: "top", horizontal: "right" }}
               transformOrigin={{ vertical: "top", horizontal: "right" }}
             >
-              <MenuItem onClick={handleEventsClose}>
-                <ScrollLink to="eventos-blog" smooth duration={600} offset={-70}>
-                  Noticias
-                </ScrollLink>
-              </MenuItem>
+              <MenuItem onClick={handleNoticiasClick}>Noticias</MenuItem>
             </Menu>
           </>
         ) : (
@@ -90,11 +93,7 @@ export default function Navbar() {
                     transformOrigin={{ vertical: "top", horizontal: "left" }}
                     MenuListProps={{ onMouseEnter: handleEventsOpen, onMouseLeave: handleEventsClose }}
                   >
-                    <MenuItem onClick={handleEventsClose}>
-                      <ScrollLink to="eventos-blog" smooth duration={600} offset={-70}>
-                        Noticias
-                      </ScrollLink>
-                    </MenuItem>
+                    <MenuItem onClick={handleNoticiasClick}>Noticias</MenuItem>
                   </Menu>
                 </Box>
               ) : (
