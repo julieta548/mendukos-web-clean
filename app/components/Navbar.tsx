@@ -1,8 +1,9 @@
 "use client";
-import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { AppBar, Toolbar, Button, Box, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import { Link as ScrollLink } from "react-scroll";
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const sections = ["Inicio", "Nosotros", "Productos", "Eventos", "Contacto"];
@@ -13,9 +14,16 @@ export default function Navbar() {
   return (
     <AppBar position="fixed" color="default" elevation={1} sx={{ backgroundColor: 'rgba(255,255,255,0.9)' }}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
-        <Typography variant="h6" sx={{ fontWeight: "bold", color: 'var(--mendukos-brown)' }}>
-          Mendukos
-        </Typography>
+
+        {/* Logo */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Image 
+            src="/images/logo.jpg"
+            alt="Mendukos"
+            width={120}
+            height={50}
+          />
+        </Box>
 
         {/* Desktop menu */}
         <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
@@ -43,6 +51,7 @@ export default function Navbar() {
             ))}
           </List>
         </Drawer>
+
       </Toolbar>
     </AppBar>
   );
