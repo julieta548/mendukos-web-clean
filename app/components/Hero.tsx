@@ -2,19 +2,26 @@
 import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function Hero() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // sm = 600px
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+
   return (
     <Box
       id="inicio"
       sx={{
-        height: "100vh",
+        height: { xs: "80vh", sm: "90vh", md: "100vh" },
         position: "relative",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
         color: "#fff",
+        px: { xs: 2, sm: 4 }, // padding horizontal para móviles
       }}
     >
       <Image
@@ -23,21 +30,44 @@ export default function Hero() {
         fill
         style={{ objectFit: "cover", zIndex: -1, filter: "brightness(0.5)" }}
       />
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <Typography variant="h2" fontWeight="bold" sx={{ color: 'white' }}>
+        <Typography
+          variant={isMobile ? "h4" : isTablet ? "h3" : "h2"}
+          fontWeight="bold"
+          sx={{ color: "white" }}
+        >
           Mendukos
         </Typography>
-        <Typography variant="h6" sx={{ mt: 2, color: 'white' }}>
+
+        <Typography
+          variant={isMobile ? "body1" : "h6"}
+          sx={{ mt: 2, color: "white" }}
+        >
           Alfajores artesanales mendocinos, hechos con amor y sabor auténtico.
         </Typography>
-        <Typography variant="body1" sx={{ mt: 1, mb: 3, color: 'white' }}>
+
+        <Typography
+          variant={isMobile ? "body2" : "body1"}
+          sx={{ mt: 1, mb: 3, color: "white" }}
+        >
           Desde Mendoza al Mundial del Alfajor y la Fiesta de las Colectividades.
         </Typography>
-        <Button variant="contained" color="primary" href="#productos">
+
+        <Button
+          variant="contained"
+          color="primary"
+          href="#productos"
+          sx={{
+            fontSize: { xs: "0.8rem", sm: "1rem" },
+            px: { xs: 2, sm: 4 },
+            py: { xs: 1, sm: 1.5 },
+          }}
+        >
           Ver productos
         </Button>
       </motion.div>
