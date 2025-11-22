@@ -1,0 +1,116 @@
+"use client";
+
+import { AppBar, Box, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import Link from "next/link";
+import { useState } from "react";
+
+const links = [
+  { label: "Inicio", href: "/" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Productos", href: "/productos" },
+  { label: "Contacto", href: "/contacto" },
+];
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <AppBar
+        position="sticky"
+        elevation={0}
+        sx={{
+          background: "white",
+          color: "#8B0000",
+          borderBottom: "1px solid #f0f0f0",
+        }}
+      >
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          {/* LOGO */}
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: 700,
+              fontFamily: "'Inter', sans-serif",
+              color: "#8B0000",
+            }}
+          >
+            Mendukos
+          </Typography>
+
+          {/* DESKTOP MENU */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+            {links.map((link) => (
+              <Button
+                key={link.href}
+                component={Link}
+                href={link.href}
+                sx={{
+                  color: "#8B0000",
+                  fontWeight: 600,
+                  "&:hover": { opacity: 0.7 },
+                }}
+              >
+                {link.label}
+              </Button>
+            ))}
+          </Box>
+
+          {/* MOBILE MENU BUTTON */}
+          <IconButton
+            sx={{ display: { xs: "flex", md: "none" }, color: "#8B0000" }}
+            onClick={() => setOpen(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      {/* MOBILE DRAWER */}
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+        <Box
+          sx={{
+            width: 260,
+            p: 2,
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {/* CLOSE BUTTON */}
+          <IconButton
+            sx={{ alignSelf: "flex-end", color: "#8B0000" }}
+            onClick={() => setOpen(false)}
+          >
+            <CloseIcon />
+          </IconButton>
+
+          <List>
+            {links.map((link) => (
+              <ListItem key={link.href} disablePadding>
+                <ListItemButton
+                  component={Link}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                >
+                  <ListItemText
+                    primary={link.label}
+                    primaryTypographyProps={{
+                      sx: {
+                        fontWeight: 600,
+                        color: "#8B0000",
+                        fontSize: "1.1rem",
+                        fontFamily: "'Inter', sans-serif",
+                      },
+                    }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+    </>
+  );
+}
