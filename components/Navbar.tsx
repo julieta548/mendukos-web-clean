@@ -1,10 +1,23 @@
 "use client";
 
-import { AppBar, Box, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 const links = [
   { label: "Inicio", href: "/" },
@@ -22,23 +35,28 @@ export default function Navbar() {
         position="sticky"
         elevation={0}
         sx={{
-          background: "white",
+          background: "#E7B10A",
           color: "#8B0000",
-          borderBottom: "1px solid #f0f0f0",
+          borderBottom: "none",
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           {/* LOGO */}
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 700,
-              fontFamily: "'Inter', sans-serif",
-              color: "#8B0000",
-            }}
-          >
-            Mendukos
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+              <Image
+                src="/images/logo.svg" // 👉 tu archivo SVG
+                alt="Logo Mendukos"
+                width={140}
+                height={50}
+                style={{
+                  filter:
+                    "brightness(0) saturate(100%) invert(17%) sepia(98%) saturate(2400%) hue-rotate(350deg) brightness(70%)",
+                  margin: "15px",
+                  }}
+              />
+            </Link>
+          </Box>
 
           {/* DESKTOP MENU */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>

@@ -6,6 +6,8 @@ import EventosPreview from "@/components/EventosPreview";
 import AnimatedSection from "@/components/AnimatedSection";
 import Hero from "@/components/Hero";
 import { Box } from "@mui/material";
+import ChocolateReal from "@/components/ChocolateReal";
+import TapasArtesanales from "@/components/TapasArtesanales";
 
 export default function Home() {
   return (
@@ -14,6 +16,23 @@ export default function Home() {
       <AnimatedSection>
         <Hero />
       </AnimatedSection>
+
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-around",
+          flexDirection: { xs: "column", sm: "row" },
+        }}
+      >
+        <AnimatedSection>
+          <ChocolateReal />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <TapasArtesanales />
+        </AnimatedSection>
+      </Box>
 
       <AnimatedSection>
         <ProductsFeatured />

@@ -10,7 +10,7 @@ const productos = [
       y un sabor intenso. El baño de chocolate semiamargo realza cada nota del relleno,
       logrando un equilibrio perfecto entre dulzura y carácter.
     `,
-    img: "/images/alfajor-pasas.jpg",
+    img: "/images/alfajor1.jpg",
   },
   {
     slug: "alfajor-nuez-blanco",
@@ -20,18 +20,8 @@ const productos = [
       Tapas artesanales de cacao blanco y un relleno casero con nueces seleccionadas.
       Este alfajor combina dulzura con textura crocante y un baño blanco delicado.
     `,
-    img: "/images/alfajor-nuez.jpg",
-  },
-  {
-    slug: "alfajor-clasico",
-    nombre: "Alfajor Clásico de Dulce de Leche",
-    descripcion: "Baño de chocolate semiamargo, relleno casero.",
-    descripcionLarga: `
-      El clásico mendocino: dulce de leche artesanal entre tapas caseras y un baño de
-      chocolate semiamargo que equilibra perfectamente el sabor.
-    `,
-    img: "/images/alfajor-clasico.jpg",
-  },
+    img: "/images/alfajor2.jpg",
+  }
 ];
 
 export default productos;

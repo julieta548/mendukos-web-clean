@@ -68,17 +68,17 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           style={{
             filter: "brightness(0) invert(1)",
-            width: "460px",
+            width: "300px",
             maxWidth: "80%",
             display: "block",
-            margin: "-4rem auto 0 auto", // ← arriba -4rem, centrado horizontal
+            margin: "0 auto", // ← arriba -4rem, centrado horizontal
           }}
         />
 
         <Typography
           variant="h4"
           sx={{
-            mt: -15,
+            mt: 3,
             color: "#f5f5f5",
             fontWeight: 400,
           }}
