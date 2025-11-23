@@ -38,12 +38,13 @@ export default function Home() {
         <ProductsFeatured />
       </AnimatedSection>
 
-      <AnimatedSection>
-        <HistoriaPreview />
-      </AnimatedSection>
 
       <AnimatedSection>
         <PremiosPreview />
+      </AnimatedSection>
+      
+      <AnimatedSection>
+        <HistoriaPreview />
       </AnimatedSection>
 
       <AnimatedSection>

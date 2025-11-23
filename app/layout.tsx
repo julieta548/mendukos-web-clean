@@ -6,7 +6,7 @@ import theme from "./theme";
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>
+      <body className="noMargin">
         <Navbar />
           <ThemeProvider theme={theme}>{children}</ThemeProvider>     
         <Footer />

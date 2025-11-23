@@ -5,7 +5,7 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#8B0000",
+      main: "#5f3b11a1",
     },
     secondary: {
       main: "#E7B10A",
@@ -58,12 +58,12 @@ const theme = createTheme({
           boxShadow: "0 3px 8px rgba(0,0,0,0.15)",
         },
         containedPrimary: {
-          backgroundColor: "#8B0000",
+          backgroundColor: "#5f3b11a1",
           "&:hover": { backgroundColor: "#6f0000" },
         },
         containedSecondary: {
           backgroundColor: "#E7B10A",
-          color: "#8B0000",
+          color: "#5f3b11a1",
           "&:hover": { backgroundColor: "#d2a009" },
         },
       },
