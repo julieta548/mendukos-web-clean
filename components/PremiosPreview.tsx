@@ -18,7 +18,7 @@ export default function PremiosPreview() {
         backgroundAttachment: "fixed", // ⭐ Parallax
         position: "relative",
         overflow: "hidden",
-        minHeight: "55rem",
+        height: "77rem",
       }}
     >
       {/* 🔥 Overlay */}
@@ -110,10 +110,10 @@ export default function PremiosPreview() {
             zIndex: 2,
           }}
         >
-          Mendukos fue reconocido a nivel nacional en el Mundial del Alfajor
-          2025, obteniendo el tercer lugar en su categoría gracias a su
-          inconfundible sabor artesanal y la calidad de sus ingredientes
-          mendocinos.
+          Mendukos participa activamente en ferias y eventos, compartiendo su
+          pasión por los alfajores artesanales. Cada encuentro es una
+          oportunidad para conectar con la gente, mostrar nuestra calidad y
+          celebrar la tradición que nos distingue.
         </Typography>
       </motion.div>
 
@@ -210,6 +210,94 @@ export default function PremiosPreview() {
             Alfajor 2025, obteniendo el tercer lugar en su categoría gracias a
             su inconfundible sabor artesanal y la calidad de sus ingredientes
             mendocinos.
+          </Typography>
+
+          <Button
+            variant="contained"
+            href="/premios"
+            sx={{ position: "relative", zIndex: 2, mt: 2 }}
+          >
+            Ver más
+          </Button>
+        </Box>
+      </Box>
+
+      <Box
+        component={motion.div}
+        initial={{ opacity: 0, y: 40, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: true }}
+        sx={{
+          background: "rgba(255,255,255,0.15)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
+          borderRadius: "12px",
+          border: "1px solid rgba(255,255,255,0.25)",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+          p: 4,
+          textAlign: "center",
+          maxWidth: 700,
+          mx: "auto",
+          position: "relative",
+          overflow: "hidden",
+          mt: "5rem",
+          zIndex: 3, // ⭐ por encima de todo
+          transition: "0.35s ease",
+          "&:hover": {
+            boxShadow: "0 12px 40px rgba(0,0,0,0.35)",
+            transform: "translateY(-4px)",
+          },
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflow: "hidden",
+            mb: 0,
+          }}
+        >
+          <Box
+            component="img"
+            src="/images/colect 1.png"
+            alt="Mundial"
+            sx={{
+              width: "12rem",
+              height: "11rem",
+              objectFit: "cover",
+              borderRadius: "12px",
+            }}
+          />
+        </Box>
+
+        <Box>
+          <Typography
+            variant="h5"
+            sx={{
+              fontWeight: 700,
+              color: "#eee",
+              mb: 1,
+              textAlign: "start",
+              ml: 3,
+            }}
+          >
+            <b>Fiesta de las colectividades 2025</b>
+          </Typography>
+
+          <Typography
+            variant="body1"
+            sx={{ color: "#fff", lineHeight: 1.6, textAlign: "start", ml: 3 }}
+          >
+            <b>Mendukos</b> dijo presente el 9, 10 y 11 de octubre de 2025, en
+            la Fiesta y Encuentro de las Colectividades de Mendoza 2025, que se
+            realizó en el corazón del Boulevard Dorrego (Guaymallén).
           </Typography>
 
           <Button

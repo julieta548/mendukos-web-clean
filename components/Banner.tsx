@@ -11,7 +11,7 @@ export default function Banner() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       sx={{
-        background: "linear-gradient(90deg, #8B0000, #E7B10A)",
+        backgroundColor: "#5f3b11a1",
         color: "white",
         textAlign: "center",
         py: 2,
@@ -20,21 +20,18 @@ export default function Banner() {
       }}
     >
       <Typography variant="h5" sx={{ fontWeight: 700 }}>
-        🎉 ¡Mendukos estará presente en la Fiesta de las Colectividades 2025! 🎉
-      </Typography>
-
-      <Typography sx={{ mt: 1, mb: 2 }}>
-        Vení a probar nuestros alfajores artesanales 🍫
+        ¡Mendukos estuvo presente en el Mundial del Alfajor 2025!
       </Typography>
 
       <Button
         variant="contained"
         sx={{
           backgroundColor: "white",
-          color: "#8B0000",
+          color: "#5f3b11a1",
           fontWeight: "bold",
           borderRadius: "20px",
           "&:hover": { backgroundColor: "#f5f5f5" },
+          mt: 2,
         }}
       >
         Más info

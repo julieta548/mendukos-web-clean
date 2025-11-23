@@ -23,7 +23,7 @@ export default function ChocolateReal() {
         position: "relative",
         overflow: "hidden",
         marginTop: "4rem",
-        height: "15rem",
+        height: "20rem",
       }}
     >
       {/* ÍCONO / IMAGEN */}

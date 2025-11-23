@@ -46,10 +46,6 @@ export default function Home() {
       <AnimatedSection>
         <HistoriaPreview />
       </AnimatedSection>
-
-      <AnimatedSection>
-        <EventosPreview />
-      </AnimatedSection>
     </>
   );
 }
