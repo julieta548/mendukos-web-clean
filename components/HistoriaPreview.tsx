@@ -30,7 +30,13 @@ export default function HistoriaPreview() {
       >
         <div>
           <SectionTitle>CONOCÉ</SectionTitle>
-          <Typography style={{ fontSize: "2.3rem", color: "#777777ff" }}>
+          <Typography
+            sx={{
+              fontSize: { sm: "2.3rem", xs: "19px" },
+              color: "#777777ff",
+              textAlign: { xs: "center" },
+            }}
+          >
             NUESTRA HISTORIA
           </Typography>
         </div>
@@ -41,21 +47,31 @@ export default function HistoriaPreview() {
             height: { xs: "1px", sm: "7.5rem" },
             width: { xs: "7.5rem", sm: "1px" },
             mx: "1.5rem",
+            my: { xs: "1rem" },
           }}
         />
 
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Typography
             color={"#777777ff"}
-            fontSize={"1.5rem"}
-            sx={{ mb: 0, py: 1, textAlign: { xs: "center", sm: "start" } }}
+            sx={{
+              mb: 0,
+              py: { sm: 1, xs: 0 },
+              textAlign: { xs: "center", sm: "start" },
+              fontSize: { sm: "1.5rem", xs: "19px" },
+            }}
           >
             Te invitamos a conocer
           </Typography>
           <Typography
             color={"#777777ff"}
             fontSize={"1.5rem"}
-            sx={{ mb: 0, py: 1, textAlign: { xs: "center", sm: "start" } }}
+            sx={{
+              mb: 0,
+              py: { sm: 1, xs: 0 },
+              textAlign: { xs: "center", sm: "start" },
+              fontSize: { sm: "1.5rem", xs: "19px" },
+            }}
           >
             nuestra trayectoria
           </Typography>
@@ -74,7 +90,9 @@ export default function HistoriaPreview() {
         }}
       >
         {/* Texto */}
-        <Typography sx={{ maxWidth: 400, textAlign: "center", color: "#777777ff" }}>
+        <Typography
+          sx={{ maxWidth: 400, textAlign: "center", color: "#777777ff" }}
+        >
           “Comencé haciendo alfajores artesanales en casa, perfeccionando la
           receta con pasión. Hoy comparto dulzura auténtica en cada bocado,
           hecha con amor y tradición.”

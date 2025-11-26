@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, Typography, Container, Grid, Link, IconButton } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Container,
+  Grid,
+  Link,
+  IconButton,
+} from "@mui/material";
 import { Facebook, Instagram } from "@mui/icons-material";
 
 export default function Footer() {
@@ -16,13 +23,20 @@ export default function Footer() {
       }}
     >
       <Container maxWidth="lg">
-        <Grid 
-          container 
-          spacing={4} 
-          justifyContent="space-between"
-        >
+        <Grid container spacing={4} justifyContent="space-between">
           {/* LOGO / MARCA */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            sx={{
+              textAlign: { xs: "center", sm: "start" },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", sm: "flex-start" },
+            }}
+          >
             <Typography
               variant="h5"
               sx={{
@@ -39,35 +53,106 @@ export default function Footer() {
           </Grid>
 
           {/* NAVEGACIÓN */}
-          <Grid item xs={6} sm={3} md={2}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            md={2}
+            sx={{
+              textAlign: { xs: "center", sm: "start" },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", sm: "flex-start" },
+            }}
+          >
+            <Typography
+              variant="subtitle1"
+              sx={{
+                fontWeight: 600,
+                mb: 1,
+                textAlign: { xs: "center" },
+              }}
+            >
               Navegación
             </Typography>
 
-            <Box sx={{ display: "flex", flexDirection: "column", gap: 0.7 }}>
-              <Link href="/" color="inherit" underline="hover">Inicio</Link>
-              <Link href="/productos" color="inherit" underline="hover">Productos</Link>
-              <Link href="/nosotros" color="inherit" underline="hover">Nosotros</Link>
-              <Link href="/premios" color="inherit" underline="hover">Premios</Link>
-              <Link href="/eventos" color="inherit" underline="hover">Eventos</Link>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 0.7,
+                textAlign: { xs: "center", sm: "start" },
+                alignItems: { xs: "center", sm: "flex-start" },
+              }}
+            >
+              <Link href="/" color="inherit" underline="hover">
+                Inicio
+              </Link>
+              <Link href="/productos" color="inherit" underline="hover">
+                Productos
+              </Link>
+              <Link href="/nosotros" color="inherit" underline="hover">
+                Nosotros
+              </Link>
+              <Link href="/premios" color="inherit" underline="hover">
+                Premios
+              </Link>
+              <Link href="/eventos" color="inherit" underline="hover">
+                Eventos
+              </Link>
             </Box>
           </Grid>
 
           {/* CONTACTO */}
-          <Grid item xs={6} sm={3} md={3}>
-            <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            md={3}
+            sx={{
+              textAlign: { xs: "center", sm: "start" },
+              display: "flex",
+              flexDirection: "column",
+              alignItems: { xs: "center", sm: "flex-start" },
+            }}
+          >
+            <Typography
+              variant="subtitle1"
+              sx={{
+                fontWeight: 600,
+                mb: 1,
+                display: { xs: "flex" },
+                justifyContent: { xs: "center" },
+                alignItems: { xs: "center" },
+              }}
+            >
               Contacto
             </Typography>
-            <Typography variant="body2">Tel: +54 9 261 XXX XXXX</Typography>
-            <Typography variant="body2">Mendoza, Argentina</Typography>
-            <Typography variant="body2">Email: contacto@mendukos.com</Typography>
+            <Typography
+              variant="body2"
+              sx={{ textAlign: { xs: "center", sm: "start" } }}
+            >
+              Tel: +54 9 261 XXX XXXX
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ textAlign: { xs: "center", sm: "start" } }}
+            >
+              Mendoza, Argentina
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ textAlign: { xs: "center", sm: "start" } }}
+            >
+              Email: contacto@mendukos.com
+            </Typography>
           </Grid>
 
           {/* REDES SOCIALES */}
-          <Grid 
-            item 
-            xs={12} 
-            sm={12} 
+          <Grid
+            item
+            xs={12}
+            sm={12}
             md={3}
             sx={{
               display: "flex",
@@ -82,17 +167,11 @@ export default function Footer() {
               Seguinos
             </Typography>
             <Box>
-              <IconButton
-                href="#"
-                sx={{ color: "white" }}
-              >
+              <IconButton href="#" sx={{ color: "white" }}>
                 <Facebook />
               </IconButton>
 
-              <IconButton
-                href="#"
-                sx={{ color: "white" }}
-              >
+              <IconButton href="#" sx={{ color: "white" }}>
                 <Instagram />
               </IconButton>
             </Box>
@@ -109,7 +188,8 @@ export default function Footer() {
           }}
         >
           <Typography variant="body2" sx={{ opacity: 0.7 }}>
-            © {new Date().getFullYear()} Mendukos - Todos los derechos reservados
+            © {new Date().getFullYear()} Mendukos - Todos los derechos
+            reservados
           </Typography>
         </Box>
       </Container>

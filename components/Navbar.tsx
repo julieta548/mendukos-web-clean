@@ -36,13 +36,13 @@ export default function Navbar() {
         elevation={0}
         sx={{
           background: "#E7B10A",
-          color: "#8B0000",
+          color: "#2B2B2B",
           borderBottom: "none",
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           {/* LOGO */}
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box sx={{ display: "flex", alignItems: "center", ml: -6, }}>
             <Link href="/" style={{ display: "flex", alignItems: "center" }}>
               <Image
                 src="/images/logo.svg" // 👉 tu archivo SVG
@@ -50,10 +50,11 @@ export default function Navbar() {
                 width={140}
                 height={50}
                 style={{
-                  filter:
-                    "brightness(0) saturate(100%) invert(17%) sepia(98%) saturate(2400%) hue-rotate(350deg) brightness(70%)",
-                  margin: "15px",
+                  fill: "#2B2B2B",
+                  margin: "5px",
+                  
                   }}
+                
               />
             </Link>
           </Box>
@@ -66,7 +67,7 @@ export default function Navbar() {
                 component={Link}
                 href={link.href}
                 sx={{
-                  color: "#8B0000",
+                  color: "#2B2B2B",
                   fontWeight: 600,
                   "&:hover": { opacity: 0.7 },
                 }}
@@ -78,7 +79,7 @@ export default function Navbar() {
 
           {/* MOBILE MENU BUTTON */}
           <IconButton
-            sx={{ display: { xs: "flex", md: "none" }, color: "#8B0000" }}
+            sx={{ display: { xs: "flex", md: "none" }, color: "#2B2B2B" }}
             onClick={() => setOpen(true)}
           >
             <MenuIcon />
@@ -98,7 +99,7 @@ export default function Navbar() {
         >
           {/* CLOSE BUTTON */}
           <IconButton
-            sx={{ alignSelf: "flex-end", color: "#8B0000" }}
+            sx={{ alignSelf: "flex-end", color: "#2B2B2B" }}
             onClick={() => setOpen(false)}
           >
             <CloseIcon />
@@ -117,7 +118,7 @@ export default function Navbar() {
                     primaryTypographyProps={{
                       sx: {
                         fontWeight: 600,
-                        color: "#8B0000",
+                        color: "#2B2B2B",
                         fontSize: "1.1rem",
                         fontFamily: "'Inter', sans-serif",
                       },

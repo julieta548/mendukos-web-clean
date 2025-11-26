@@ -3,7 +3,7 @@
 import { Typography, Box } from "@mui/material";
 import SectionBox from "./SectionBox";
 
-export default function SectionTitle({ children }) {
+export default function SectionTitlePremios({ children }) {
   return (
     <SectionBox textAlign="center" my={4}>
       <Typography
@@ -11,7 +11,7 @@ export default function SectionTitle({ children }) {
           fontWeight: 500,
           fontFamily: "'Inter', sans-serif",
           fontSize: {
-            xs: "2.8rem", // móviles
+            xs: "2rem", // móviles
             sm: "5rem", // tablets y desktop
           },
           marginBottom: "3px",

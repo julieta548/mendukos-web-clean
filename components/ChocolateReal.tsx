@@ -23,10 +23,10 @@ export default function ChocolateReal() {
         position: "relative",
         overflow: "hidden",
         marginTop: "4rem",
-        height: "20rem",
+        height: { xs: "100%", sm: "20rem" },
+        width: { xs: "80%", sm: "100%" },
       }}
     >
-      {/* ÍCONO / IMAGEN */}
       <Box
         component="img"
         src="/images/chocolate.png"
@@ -61,9 +61,9 @@ export default function ChocolateReal() {
           lineHeight: 1.6,
         }}
       >
-        Elaboramos cada alfajor con <strong>chocolate auténtico</strong>,
-        sin baños saborizados ni coberturas artificiales.  
-        Su textura, aroma y pureza se sienten en cada mordida.
+        Elaboramos cada alfajor con <strong>chocolate auténtico</strong>, sin
+        baños saborizados ni coberturas artificiales. Su textura, aroma y pureza
+        se sienten en cada mordida.
       </Typography>
     </Box>
   );

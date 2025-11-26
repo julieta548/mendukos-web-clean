@@ -27,13 +27,25 @@ export default function ProductsFeatured() {
             xs: "column", // móviles
             sm: "row", // tablets y desktop
           },
+          width: {
+            xs: "80%", // móviles
+            sm: "100%", // tablets y desktop
+          },
           alignItems: "center",
           justifyContent: "center",
         }}
       >
         <div>
           <SectionTitle>NUESTROS</SectionTitle>
-          <Typography style={{ fontSize: "2.05rem", color: "#777777ff" }}>
+          <Typography
+            sx={{
+              fontSize: {
+                xs: "18px", // móviles
+                sm: "2.05rem", // tablets y desktop
+              },
+              color: "#777777ff",
+            }}
+          >
             PRODUCTOS DESTACADOS
           </Typography>
         </div>
@@ -54,19 +66,48 @@ export default function ProductsFeatured() {
             }}
           ></Box>
         </div>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: { xs: "center", sm: "start" },
+          }}
+        >
           <Typography
             color={"#777777ff"}
             fontSize={"1.5rem"}
-            sx={{ mb: 0, py: 1, textAlign: { xs: "center", sm: "start" } }}
+            sx={{
+              mb: 0,
+              py: {
+                xs: "0", // móviles
+                sm: "1", // tablets y desktop
+              },
+              textAlign: { xs: "center", sm: "start" },
+              fontSize: {
+                xs: "18px", // móviles
+                sm: "2.05rem", // tablets y desktop
+              },
+            }}
           >
             Visitá nuestra amplia
           </Typography>
           <Typography
             color={"#777777ff"}
-            fontSize={"1.5rem"}
-            textAlign="start"
-            sx={{ mb: 0, py: 1 }}
+            sx={{
+              mb: 0,
+              py: {
+                xs: "0", // móviles
+                sm: "1", // tablets y desktop
+              },
+              fontSize: {
+                xs: "18px", // móviles
+                sm: "2.05rem", // tablets y desktop
+              },
+              textAlign: {
+                xs: "center", // móviles
+                sm: "start", // tablets y desktop
+              },
+            }}
           >
             variedad de alfajores artesanales
           </Typography>
@@ -92,13 +133,25 @@ export default function ProductsFeatured() {
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
-                marginTop: "4rem",
+                marginTop: { xs: "1rem", sm: "4rem" },
                 height: "16rem",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 overflow: "hidden",
                 transition: "0.4s ease",
+
+                "& .overlay": {
+                  opacity: {
+                    xs: "1", // móviles
+                    sm: "0", // tablets y desktop
+                  },
+                },
+
+                "& .content": {
+                  color: { xs: "#fff" },
+                  filter: { xs: "drop-shadow(0 0 6px rgba(0,0,0,0.7))" },
+                },
 
                 // 🔥 Al hacer hover, se oscurece la imagen
                 "&:hover .overlay": {
@@ -183,6 +236,18 @@ export default function ProductsFeatured() {
                 overflow: "hidden",
                 transition: "0.4s ease",
 
+                "& .overlay": {
+                  opacity: {
+                    xs: "1", // móviles
+                    sm: "0", // tablets y desktop
+                  },
+                },
+
+                "& .content": {
+                  color: { xs: "#fff" },
+                  filter: { xs: "drop-shadow(0 0 6px rgba(0,0,0,0.7))" },
+                },
+
                 // 🔥 Al hacer hover, se oscurece la imagen
                 "&:hover .overlay": {
                   opacity: 1,
@@ -239,11 +304,7 @@ export default function ProductsFeatured() {
           </Grid>
         ))}
       </Grid>
-      <Button
-        sx={{ marginTop: "4rem" }}
-        variant="outlined"
-        href="/productos"
-      >
+      <Button sx={{ marginTop: "4rem" }} variant="outlined" href="/productos">
         Conocer todos
       </Button>
     </Box>

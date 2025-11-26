@@ -3,6 +3,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import SectionTitle from "./SectionTitle";
 import { motion } from "framer-motion";
+import SectionTitlePremios from "./SectionTitlePremios";
 
 export default function PremiosPreview() {
   return (
@@ -18,7 +19,7 @@ export default function PremiosPreview() {
         backgroundAttachment: "fixed", // ⭐ Parallax
         position: "relative",
         overflow: "hidden",
-        height: "77rem",
+        height: { xs: "100%", sm: "77rem" },
       }}
     >
       {/* 🔥 Overlay */}
@@ -52,8 +53,10 @@ export default function PremiosPreview() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <SectionTitle>PARTICIPACIÓN</SectionTitle>
-          <Typography style={{ fontSize: "2.4rem", color: "#fff" }}>
+          <SectionTitlePremios>PARTICIPACIÓN</SectionTitlePremios>
+          <Typography
+            sx={{ fontSize: { xs: "1rem", sm: "2.4rem" }, color: "#fff" }}
+          >
             PREMIOS Y RECONOCIMIENTOS
           </Typography>
         </motion.div>
@@ -64,6 +67,7 @@ export default function PremiosPreview() {
             height: { xs: "1px", sm: "7.5rem" },
             width: { xs: "7.5rem", sm: "1px" },
             mx: "1rem",
+            marginTop: { xs: "1rem" },
           }}
         />
 
@@ -76,15 +80,23 @@ export default function PremiosPreview() {
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <Typography
               color="#fff"
-              fontSize="1.5rem"
-              sx={{ py: 1, textAlign: { xs: "center", sm: "start" } }}
+              sx={{
+                mt: { xs: "1rem" },
+                py: { xs: "0", sm: 1 },
+                textAlign: { xs: "center", sm: "start" },
+                fontSize: { xs: "1rem", sm: "1.5rem" },
+              }}
             >
               Conocé
             </Typography>
             <Typography
               color="#fff"
-              fontSize="1.5rem"
-              sx={{ py: 1, textAlign: { xs: "center", sm: "start" } }}
+              sx={{
+                mt: { xs: "0" },
+                py: { xs: "0", sm: 1 },
+                textAlign: { xs: "center", sm: "start" },
+                fontSize: { xs: "1rem", sm: "1.5rem" },
+              }}
             >
               nuestros premios
             </Typography>
@@ -160,6 +172,10 @@ export default function PremiosPreview() {
             transform: "translateY(-4px)",
           },
           display: "flex",
+          flexDirection: {
+            xs: "column",
+            sm: "row",
+          },
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -195,8 +211,9 @@ export default function PremiosPreview() {
               fontWeight: 700,
               color: "#eee",
               mb: 1,
-              textAlign: "start",
-              ml: 3,
+              mt: { xs: "1rem" },
+              textAlign: { sm: "start", xs: "center" },
+              ml: { xs: "0", sm: 3 },
             }}
           >
             <b>Mundial del alfajor</b>
@@ -204,7 +221,12 @@ export default function PremiosPreview() {
 
           <Typography
             variant="body1"
-            sx={{ color: "#fff", lineHeight: 1.6, textAlign: "start", ml: 3 }}
+            sx={{
+              color: "#fff",
+              lineHeight: 1.6,
+              textAlign: { sm: "start", xs: "center" },
+              ml: { xs: "0", sm: 3 },
+            }}
           >
             <b>Mendukos</b> fue reconocido a nivel nacional en el Mundial del
             Alfajor 2025, obteniendo el tercer lugar en su categoría gracias a
@@ -242,6 +264,7 @@ export default function PremiosPreview() {
           position: "relative",
           overflow: "hidden",
           mt: "5rem",
+          mb: "5rem",
           zIndex: 3, // ⭐ por encima de todo
           transition: "0.35s ease",
           "&:hover": {
@@ -249,6 +272,10 @@ export default function PremiosPreview() {
             transform: "translateY(-4px)",
           },
           display: "flex",
+          flexDirection: {
+            xs: "column",
+            sm: "row",
+          },
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -258,6 +285,10 @@ export default function PremiosPreview() {
             width: "100%",
             height: "100%",
             display: "flex",
+            flexDirection: {
+              xs: "column",
+              sm: "row",
+            },
             justifyContent: "center",
             alignItems: "center",
             overflow: "hidden",
@@ -284,8 +315,9 @@ export default function PremiosPreview() {
               fontWeight: 700,
               color: "#eee",
               mb: 1,
-              textAlign: "start",
-              ml: 3,
+              textAlign: { sm: "start", xs: "center" },
+              ml: { xs: "0", sm: 3 },
+              mt: { xs: "1rem" },
             }}
           >
             <b>Fiesta de las colectividades 2025</b>
@@ -293,7 +325,12 @@ export default function PremiosPreview() {
 
           <Typography
             variant="body1"
-            sx={{ color: "#fff", lineHeight: 1.6, textAlign: "start", ml: 3 }}
+            sx={{
+              color: "#fff",
+              lineHeight: 1.6,
+              textAlign: { sm: "start", xs: "center" },
+              ml: { xs: "0", sm: 3 },
+            }}
           >
             <b>Mendukos</b> dijo presente el 9, 10 y 11 de octubre de 2025, en
             la Fiesta y Encuentro de las Colectividades de Mendoza 2025, que se

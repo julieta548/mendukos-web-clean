@@ -23,7 +23,8 @@ export default function TapasArtesanales() {
         position: "relative",
         overflow: "hidden",
         marginTop: "4rem",
-        height: "20rem",
+        height: { xs: "100%", sm: "20rem" },
+        width: { xs: "80%", sm: "100%"},
       }}
     >
       {/* ÍCONO / IMAGEN */}
