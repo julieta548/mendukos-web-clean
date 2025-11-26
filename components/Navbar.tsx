@@ -21,9 +21,9 @@ import Image from "next/image";
 
 const links = [
   { label: "Inicio", href: "/" },
-  { label: "Nosotros", href: "/nosotros" },
-  { label: "Productos", href: "/productos" },
-  { label: "Contacto", href: "/contacto" },
+  { label: "Nosotros", href: "/" },
+  { label: "Productos", href: "/" },
+  { label: "Contacto", href: "/" },
 ];
 
 export default function Navbar() {

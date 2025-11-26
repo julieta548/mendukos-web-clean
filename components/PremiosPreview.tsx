@@ -137,7 +137,7 @@ export default function PremiosPreview() {
       >
         <Button
           variant="contained"
-          href="/premios"
+          href="/"
           sx={{ position: "relative", zIndex: 2 }}
         >
           Ver más
@@ -236,7 +236,7 @@ export default function PremiosPreview() {
 
           <Button
             variant="contained"
-            href="/premios"
+            href="/"
             sx={{ position: "relative", zIndex: 2, mt: 2 }}
           >
             Ver más

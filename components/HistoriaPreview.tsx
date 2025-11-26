@@ -114,7 +114,7 @@ export default function HistoriaPreview() {
         />
       </Box>
 
-      <Button variant="outlined" href="/nosotros" sx={{ mt: 4 }}>
+      <Button variant="outlined" href="/" sx={{ mt: 4 }}>
         Conocer más
       </Button>
     </Box>

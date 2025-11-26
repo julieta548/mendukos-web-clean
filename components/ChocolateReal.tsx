@@ -46,7 +46,7 @@ export default function ChocolateReal() {
         variant="h5"
         sx={{
           fontWeight: 700,
-          color: "#8B0000",
+          color: "#2b2b2b",
           mb: 1,
         }}
       >

@@ -33,7 +33,7 @@ export default function Banner() {
           "&:hover": { backgroundColor: "#f5f5f5" },
           mt: 2,
         }}
-        href="/premios"
+        href="/"
       >
         Más info
       </Button>

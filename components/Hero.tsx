@@ -105,14 +105,14 @@ export default function Hero() {
           <Button
             variant="contained"
             color="secondary"
-            href="/productos"
+            href="/"
             sx={{
               mt: 4,
               borderRadius: "30px",
               px: 4,
               py: 1.4,
               fontWeight: 700,
-              color: "#8B0000",
+              color: "#2b2b2b",
             }}
           >
             Conocer más
