@@ -304,7 +304,7 @@ export default function ProductsFeatured() {
           </Grid>
         ))}
       </Grid>
-      <Button sx={{ marginTop: "4rem" }} variant="outlined" href="/productos">
+      <Button sx={{ marginTop: "4rem" }} variant="outlined" href="/">
         Conocer todos
       </Button>
     </Box>
