@@ -1,27 +1,45 @@
 const productos = [
   {
     slug: "alfajor-pasas-rhum",
-    nombre: "Alfajor con Pasas al Rhum",
-    descripcion: "Baño de chocolate semiamargo, relleno casero.",
-    descripcionLarga: `
-      Una experiencia única que combina lo mejor de la tradición artesanal con un toque gourmet.
-      Este alfajor está elaborado con una suave masa de cacao, rellena con dulce de leche
-      artesanal y pasas cuidadosamente maceradas en rhum, que le aportan un aroma envolvente
-      y un sabor intenso. El baño de chocolate semiamargo realza cada nota del relleno,
-      logrando un equilibrio perfecto entre dulzura y carácter.
+    title: "Alfajor con Pasas al Rhum",
+    image: "/images/alfajor1.jpg",
+    description: "Baño de chocolate semiamargo, relleno casero con pasas al rhum.",
+    details: `
+      Nuestro alfajor insignia, elaborado con galletas suaves, 
+      relleno de dulce de leche casero y pasas hidratadas en rhum.
+      Baño de chocolate semiamargo premium.
     `,
-    img: "/images/alfajor1.jpg",
   },
   {
-    slug: "alfajor-nuez-blanco",
-    nombre: "Alfajor Blanco con Nuez",
-    descripcion: "Baño de chocolate blanco, relleno casero.",
-    descripcionLarga: `
-      Tapas artesanales de cacao blanco y un relleno casero con nueces seleccionadas.
-      Este alfajor combina dulzura con textura crocante y un baño blanco delicado.
+    slug: "alfajor-blanco-nuez",
+    title: "Alfajor Blanco con Nuez",
+    image: "/images/alfajor2.jpg",
+    description: "Baño de chocolate blanco, relleno clásico casero.",
+    details: `
+      Galletas delicadas rellenas de dulce de leche casero, 
+      con trozos de nuez seleccionada y baño de chocolate blanco artesanal.
     `,
-    img: "/images/alfajor2.jpg",
-  }
+  },
+  {
+    slug: "alfajor-cafe-chocolate",
+    title: "Alfajor de Café y Chocolate",
+    image: "/images/alfajor3.jpg",
+    description: "Baño de chocolate semiamargo, relleno sabor café.",
+    details: `
+      Una combinación perfecta para amantes del café. 
+      Relleno cremoso con café molido y cobertura de chocolate semiamargo.
+    `,
+  },
+  {
+    slug: "alfajor-clasico",
+    title: "Alfajor Clásico de Dulce de Leche",
+    image: "/images/alfajor1.jpg",
+    description: "Baño de chocolate semiamargo, relleno casero tradicional.",
+    details: `
+      El clásico mendocino que nunca falla. 
+      Relleno de dulce de leche casero y cobertura de chocolate semiamargo.
+    `,
+  },
 ];
 
 export default productos;

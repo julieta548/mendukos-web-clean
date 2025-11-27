@@ -22,7 +22,7 @@ import Image from "next/image";
 const links = [
   { label: "Inicio", href: "/" },
   { label: "Nosotros", href: "/" },
-  { label: "Productos", href: "/" },
+  { label: "Productos", href: "/productos" },
   { label: "Contacto", href: "/" },
 ];
 

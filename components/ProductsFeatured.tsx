@@ -2,12 +2,12 @@
 
 import { Box, Grid, Button, Typography } from "@mui/material";
 import SectionTitle from "./SectionTitle";
-import productos from "@/data/productos";
+import alfajores from "@/data/alfajores";
 import { StyleSheet } from "@emotion/sheet";
 import { url } from "inspector";
 
 export default function ProductsFeatured() {
-  const destacados = productos.slice(0, 3);
+  const destacados = alfajores.slice(0, 3);
 
   return (
     <Box
@@ -128,7 +128,7 @@ export default function ProductsFeatured() {
                 borderRadius: 1,
                 p: 3,
                 textAlign: "center",
-                backgroundImage: `url(${p.img})`,
+                backgroundImage: `url(${p.imagen})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -223,7 +223,7 @@ export default function ProductsFeatured() {
                 borderRadius: 1,
                 p: 3,
                 textAlign: "center",
-                backgroundImage: `url(${p.img})`,
+                backgroundImage: `url(${p.imagen})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -304,7 +304,7 @@ export default function ProductsFeatured() {
           </Grid>
         ))}
       </Grid>
-      <Button sx={{ marginTop: "4rem" }} variant="outlined" href="/">
+      <Button sx={{ marginTop: "4rem" }} variant="outlined" href="/productos">
         Conocer todos
       </Button>
     </Box>

@@ -1,65 +1,105 @@
-import { Box, Typography, Container, Button } from "@mui/material";
-import alfajores from "@/data/alfajores";
-import { notFound } from "next/navigation";
-import { motion } from "framer-motion";
-import React from "react";
+"use client";
+
+import productos from "@/data/productos";
+import { Box, Typography, Button, Card, CardMedia } from "@mui/material";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { use } from "react";
 
 export default function ProductoPage({ params }) {
-  const { slug } = params;
-  const producto = alfajores.find((a) => a.slug === slug);
+  const resolvedParams = use(params);
+  const { slug } = resolvedParams;
 
-  if (!producto) return notFound();
+  const producto = productos.find((p) => p.slug === slug);
 
-  const MotionImg = motion("img");
+  if (!producto) {
+    return (
+      <Box sx={{ p: 10, textAlign: "center" }}>
+        <Typography variant="h4">Producto no encontrado</Typography>
+      </Box>
+    );
+  }
 
   return (
-    <Container maxWidth="md" sx={{ py: 10 }}>
-      {/* IMAGEN GRANDE */}
-      <MotionImg
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        src={producto.imagen}
-        alt={producto.nombre}
-        style={{
-          width: "100%",
-          borderRadius: "16px",
-          boxShadow: "0 8px 30px rgba(0,0,0,0.15)",
-          marginBottom: "40px",
-        }}
-      />
+    <>
 
-      {/* TÍTULO */}
-      <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
-        {producto.nombre}
-      </Typography>
-
-      {/* DESCRIPCIÓN */}
-      <Typography
-        variant="body1"
-        sx={{ color: "text.secondary", lineHeight: 1.7, mb: 4 }}
-      >
-        {producto.descripcion}
-      </Typography>
-
-      {/* BOTÓN DE COMPRA */}
-      <Button
-        variant="contained"
-        color="primary"
-        size="large"
+      <Box
         sx={{
-          borderRadius: "30px",
-          px: 4,
-          py: 1.2,
-          fontWeight: 700,
+          width: "100%",
+          py: 8,
+          px: { xs: 3, md: 12 },
+          backgroundColor: "#FAF7F2",
         }}
-        href={`https://wa.me/5492610000000?text=Hola!%20Quiero%20comprar%20el%20alfajor%20${encodeURIComponent(
-          producto.nombre
-        )}`}
-        target="_blank"
       >
-        Comprar por WhatsApp
-      </Button>
-    </Container>
+        {/* Título */}
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: 700,
+            textAlign: "center",
+            mb: 6,
+            color: "#333",
+          }}
+        >
+          {producto.title}
+        </Typography>
+
+        {/* Contenedor principal */}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            gap: 5,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {/* Imagen */}
+          <Card
+            sx={{
+              width: { xs: "100%", md: "40%" },
+              borderRadius: 4,
+              boxShadow: 4,
+            }}
+          >
+            <CardMedia
+              component="img"
+              image={producto.image}
+              alt={producto.title}
+              sx={{ height: 350, objectFit: "cover" }}
+            />
+          </Card>
+
+          {/* Texto */}
+          <Box sx={{ maxWidth: 500 }}>
+            <Typography
+              variant="h6"
+              sx={{ mb: 2, color: "grey.700", whiteSpace: "pre-line" }}
+            >
+              {producto.details}
+            </Typography>
+
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#D9D9D9",
+                color: "black",
+                px: 4,
+                py: 1,
+                borderRadius: 2,
+                textTransform: "none",
+                boxShadow: "none",
+                "&:hover": {
+                  backgroundColor: "#c8c8c8",
+                },
+              }}
+              href="/productos"
+            >
+              ← Volver a productos
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </>
   );
 }
