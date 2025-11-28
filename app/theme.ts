@@ -20,12 +20,12 @@ const theme = createTheme({
   },
 
   typography: {
-    fontFamily: "'Inter', sans-serif",
+    fontFamily: "'Poppins', sans-serif",
 
     h1: { fontWeight: 700, marginTop: "3px", marginBottom: "3px" },
     h2: { fontWeight: 700, marginTop: "3px", marginBottom: "3px" },
-    h3: { fontWeight: 700, marginTop: "3px", marginBottom: "3px" },
-    h4: { fontWeight: 600, marginTop: "3px", marginBottom: "3px" },
+    h3: { fontWeight: 700, marginTop: "0", marginBottom: "3px" },
+    h4: { fontWeight: 600, marginTop: "0", marginBottom: "3px" },
     h5: { fontWeight: 600, marginTop: "3px", marginBottom: "3px" },
     h6: { fontWeight: 600, marginTop: "3px", marginBottom: "3px" },
 

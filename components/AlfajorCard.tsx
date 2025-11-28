@@ -6,14 +6,14 @@ export default function AlfajorCard({ title, image, description, slug }) {
     <Grid container spacing={2} sx={{ mb: 6, alignItems: "center", display: "flex", justifyContent: "center" }}>
       
       <Grid item xs={12} md={4}>
-        <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
+        <Card sx={{ borderRadius: 2, boxShadow: 2 }}>
           <CardMedia component="img" height="220" image={image} alt={title} />
         </Card>
       </Grid>
 
       <Grid item xs={12} md={4}>
         <CardContent>
-          <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
+          <Typography variant="h5" sx={{ fontWeight: 500, mb: 1, color: "#696767ff" }}>
             {title}
           </Typography>
 
@@ -26,7 +26,7 @@ export default function AlfajorCard({ title, image, description, slug }) {
               variant="text"
               sx={{
                 color: "#F4A60A",
-                fontWeight: 600,
+                fontWeight: 400,
                 fontSize: "1rem",
                 textTransform: "none",
               }}

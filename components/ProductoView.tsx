@@ -15,7 +15,7 @@ export default function ProductoView({ producto }) {
         alt={producto.nombre}
         sx={{
           width: "100%",
-          borderRadius: 4,
+          borderRadius: 2,
           boxShadow: "0 8px 30px rgba(0,0,0,0.15)",
           mb: 5,
         }}

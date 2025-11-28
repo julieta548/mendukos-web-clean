@@ -1,9 +1,9 @@
-import HistoriaFull from "@/components/HistoriaFull";
 
+import  HistoriaFull from '@/components/HistoriaFull';
 export default function NosotrosPage() {
   return (
     <main>
-      <HistoriaFull />
+     < HistoriaFull/>
     </main>
   );
 }

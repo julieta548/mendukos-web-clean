@@ -1,18 +1,15 @@
 const productos = [
   {
     slug: "alfajor-pasas-rhum",
-    title: "Alfajor con Pasas al Rhum",
+    title: "CON PASAS AL RHUM",
     image: "/images/alfajor1.jpg",
-    description: "Baño de chocolate semiamargo, relleno casero con pasas al rhum.",
-    details: `
-      Nuestro alfajor insignia, elaborado con galletas suaves, 
-      relleno de dulce de leche casero y pasas hidratadas en rhum.
-      Baño de chocolate semiamargo premium.
-    `,
+    description:
+      "Baño de chocolate semiamargo, relleno casero con pasas al rhum.",
+    details: `Nuestro alfajor insignia, elaborado con galletas suaves, relleno de dulce de leche casero y pasas hidratadas en rhum. Baño de chocolate semiamargo premium.`,
   },
   {
     slug: "alfajor-blanco-nuez",
-    title: "Alfajor Blanco con Nuez",
+    title: "BLANCO CON NUEZ",
     image: "/images/alfajor2.jpg",
     description: "Baño de chocolate blanco, relleno clásico casero.",
     details: `
@@ -22,7 +19,7 @@ const productos = [
   },
   {
     slug: "alfajor-cafe-chocolate",
-    title: "Alfajor de Café y Chocolate",
+    title: "DE CAFÉ Y CHOCOLATE",
     image: "/images/alfajor3.jpg",
     description: "Baño de chocolate semiamargo, relleno sabor café.",
     details: `
@@ -32,7 +29,7 @@ const productos = [
   },
   {
     slug: "alfajor-clasico",
-    title: "Alfajor Clásico de Dulce de Leche",
+    title: "CLÁSICO DE DULCE DE LECHE",
     image: "/images/alfajor1.jpg",
     description: "Baño de chocolate semiamargo, relleno casero tradicional.",
     details: `

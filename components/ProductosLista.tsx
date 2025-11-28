@@ -24,17 +24,57 @@ export default function ProductosLista({ productos }) {
             from: { opacity: 0 },
             to: { opacity: 1 },
           },
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <Box sx={{ textAlign: "center", mb: 10,  }}>
-          <Typography variant="h3" sx={{ fontWeight: 700, color: "#6D6D6D" }}>
-            NUESTROS
-          </Typography>
-          <Typography variant="h3" sx={{ fontWeight: 700, color: "#333" }}>
-            ALFAJORES
-          </Typography>
-        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 2, // espacio entre logo y texto
+            textAlign: "center", // centrado interno
+            mb: 4,
+            flexDirection: {xs: "column", sm: "row"}
+          }}
+        >
+          <img
+            src="/images/logo.svg"
+            style={{
+              width: "7rem",
+              backgroundColor: "#E7B10A",
+              borderRadius: "10px",
+              padding: "1rem",
+            }}
+            alt="logo"
+          />
 
+          <Box sx={{ textAlign: "start", mb: 0 }}>
+            <Typography
+              variant="h3"
+              sx={{ fontWeight: 500, color: "#ecb338ff" }}
+            >
+              NUESTROS
+            </Typography>
+            <Typography
+              variant="h3"
+              sx={{ fontWeight: 500, color: "#696767ff" }}
+            >
+              ALFAJORES
+            </Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            width: "2px",
+            height: "7rem",
+            background: "linear-gradient(to bottom, #ecb338ff, #ffffff)",
+            mb: 5,
+          }}
+        ></Box>
         {productos.map((p, index) => (
           <AlfajorCard
             key={index}

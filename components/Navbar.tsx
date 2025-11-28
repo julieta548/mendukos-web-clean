@@ -21,9 +21,10 @@ import Image from "next/image";
 
 const links = [
   { label: "Inicio", href: "/" },
-  { label: "Nosotros", href: "/" },
+  { label: "Nosotros", href: "/nosotros" },
   { label: "Productos", href: "/productos" },
-  { label: "Contacto", href: "/" },
+  { label: "Premios", href: "/premios" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export default function Navbar() {
@@ -36,7 +37,7 @@ export default function Navbar() {
         elevation={0}
         sx={{
           background: "#E7B10A",
-          color: "#2B2B2B",
+          color: "#696767ff",
           borderBottom: "none",
         }}
       >
@@ -50,7 +51,7 @@ export default function Navbar() {
                 width={140}
                 height={50}
                 style={{
-                  fill: "#2B2B2B",
+                  fill: "#696767ff",
                   margin: "5px",
                   
                   }}
@@ -67,8 +68,8 @@ export default function Navbar() {
                 component={Link}
                 href={link.href}
                 sx={{
-                  color: "#2B2B2B",
-                  fontWeight: 600,
+                  color: "#696767ff",
+                  fontWeight: 400,
                   "&:hover": { opacity: 0.7 },
                 }}
               >
@@ -79,7 +80,7 @@ export default function Navbar() {
 
           {/* MOBILE MENU BUTTON */}
           <IconButton
-            sx={{ display: { xs: "flex", md: "none" }, color: "#2B2B2B" }}
+            sx={{ display: { xs: "flex", md: "none" }, color: "#696767ff" }}
             onClick={() => setOpen(true)}
           >
             <MenuIcon />
@@ -99,7 +100,7 @@ export default function Navbar() {
         >
           {/* CLOSE BUTTON */}
           <IconButton
-            sx={{ alignSelf: "flex-end", color: "#2B2B2B" }}
+            sx={{ alignSelf: "flex-end", color: "#696767ff" }}
             onClick={() => setOpen(false)}
           >
             <CloseIcon />
@@ -117,8 +118,8 @@ export default function Navbar() {
                     primary={link.label}
                     primaryTypographyProps={{
                       sx: {
-                        fontWeight: 600,
-                        color: "#2B2B2B",
+                        fontWeight: 400,
+                        color: "#696767ff",
                         fontSize: "1.1rem",
                         fontFamily: "'Inter', sans-serif",
                       },
