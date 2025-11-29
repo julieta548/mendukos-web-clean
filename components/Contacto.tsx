@@ -144,7 +144,7 @@ export default function Contacto() {
               >
                 <CardContent sx={{ textAlign: "center" }}>
                   <Typography variant="h6" fontWeight={600} sx={{ mt: 1 }}>
-                    Contáctanos directamente
+                    Contactanos directamente
                   </Typography>
                   
                   <Box sx={{ mt: 2 }}>
