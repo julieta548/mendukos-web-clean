@@ -25,7 +25,7 @@ export default function Contacto() {
             variant="h3"
             align="center"
             fontWeight={700}
-            sx={{ mb: 2, color: "#696767ff" }}
+            sx={{ mb: 2, color: "#696767ff", fontSize: {md: "3rem", xs: "1.5rem" } }}
           >
             CONTACTANOS
           </Typography>
